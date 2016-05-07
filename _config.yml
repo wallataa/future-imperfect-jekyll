@@ -1,7 +1,7 @@
 # Details
 title:       Future Imperfect
 description: Jekyll port of Future Imperfect template by HTML5 UP
-url:         http://seshaljain.github.io/future-imperfect-jekyll/
+url:         http://seshaljain.github.io
 baseurl:     /future-imperfect-jekyll
 
 #Author
@@ -19,7 +19,7 @@ permalink:   /:categories/:title/
 # destination: dest
 # source:      src # Removed because Github Pages does not allow different source directory
 markdown:    kramdown
-highlighter: pygments
+highlighter: rouge
 
 # Gems
 gems:
