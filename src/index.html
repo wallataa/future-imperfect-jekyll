@@ -1,0 +1,43 @@
+---
+layout: page
+---
+{% for post in paginator.posts %}
+<article class="post">
+	<header>
+		<div class="title">
+			<h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+			<p>{{post.description}}</p>
+		</div>
+		<div class="meta">
+			<time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %B, %Y" }}</time>
+			<a href="#" class="author">
+			<span class="name">
+				{% if post.author %}
+					{% assign author = site.data.authors[post.author] %}{% else %}{% assign author = site.owner %}
+				{% endif %}
+				{{ author.name }}
+			</span>
+			{% if author.avatar contains 'http' %}
+			<img src="{{ author.avatar }}" alt="{{ author.name }}">
+			{% elsif author.avatar %}
+			<img src="{{ site.baseurl }}/img/authors/{{ author.avatar }}" alt="{{ author.name }}">
+			{% endif %}
+			</a>
+		</div>
+	</header>
+	{% if post.featureimg %}
+	<a href="{{ post.url | prepend: site.baseurl }}" class="image featured"><img src="{{ post.featureimg | prepend: site.baseurl }}"></a>
+	{% endif %}
+	<p>{{ post.excerpt | limit: 150 }}</p>
+	<footer>
+		<ul class="actions">
+			<li><a href="{{ post.url | prepend: site.baseurl }}" class="button big">Continue Reading <i class="fa fa-lg fa-angle-double-right"></i> </a></li>
+		</ul>
+		<ul class="stats">
+			{% for category in post.categories %}
+			<li>Category: {{ category }}</li>
+			{% endfor %}
+		</ul>
+	</footer>
+</article>
+{% endfor %}

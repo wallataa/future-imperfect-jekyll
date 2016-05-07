@@ -1,0 +1,64 @@
+<section id="sidebar">
+
+	<!-- Intro -->
+		<section id="intro">
+			<a href="/" class="logo"><img src="{{ site.baseurl }}/img/logo.jpg" alt="" /></a>
+			<header>
+				<h2>Future Imperfect</h2>
+				<p>Another fine responsive site template by <a href="http://html5up.net">HTML5 UP</a></p>
+			</header>
+		</section>
+	{% if site.related_posts.size >= 1 %}
+	{% if page.layout == 'post' %}
+	<!-- Related Posts -->
+		<section>
+		<h3>Recommended Posts:</h3>
+			<div class="mini-posts">
+	{% for post in site.related_posts %}
+				<article class="mini-post">
+					<header>
+						<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+						<time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %B, %Y" }}</time>
+						<a href="#" class="author">
+						{% if post.author %}
+							{% assign author = site.data.authors[post.author] %}{% else %}{% assign author = site.owner %}
+						{% endif %}
+						{% if author.avatar contains 'http' %}
+						<img src="{{ author.avatar }}" alt="{{ author.name }}">
+						{% elsif author.avatar %}
+						<img src="{{ site.baseurl }}/img/authors/{{ author.avatar }}" alt="{{ author.name }}">
+						{% endif %}
+						</a>
+					</header>
+					{% if post.featureimg %}
+					<a href="{{ post.url | prepend: site.baseurl }}" class="image"><img src="{{ post.featureimg | prepend: site.baseurl }}"></a>
+					{% endif %}
+				</article>
+	{% endfor %}
+			</div>
+		</section>
+	{% endif %}
+	{% endif %}
+
+	<!-- About -->
+		<section class="blurb">
+			<h2>About the blog</h2>
+			<p>{{ site.description }}</p>
+			<ul class="actions">
+				<li><a href="{{ site.baseurl }}about/" class="button">Learn More</a></li>
+			</ul>
+		</section>
+
+	<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="#" class="fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="fa-rss"><span class="label">RSS</span></a></li>
+				<li><a href="#" class="fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>. Avatars: <a href="http://uifaces.com">ui Faces</a></p>
+		</section>
+
+</section>

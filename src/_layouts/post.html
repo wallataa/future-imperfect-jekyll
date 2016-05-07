@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<article class="post">
+	<header>
+		<div class="title">
+			<h2>{{ page.title }}</h2>
+			{% if page.description %}
+			<p>{{page.description}}</p>
+			{% endif %}
+			{% if page.tags %}
+			<p>Tags: {{ page.tags | array_to_sentence_string }}</p>
+			{% endif %}
+		</div>
+		<div class="meta">
+			<time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%d %B, %Y" }}</time>
+			<a href="#" class="author">
+			<span class="name">
+				{% if page.author %}
+					{% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
+				{% endif %}
+				{{ author.name }}
+			</span>
+			{% if author.avatar contains 'http' %}
+			<img src="{{ author.avatar }}" alt="{{ author.name }}">
+			{% elsif author.avatar %}
+			<img src="{{ site.baseurl | prepend: site.url }}img/authors/{{ author.avatar }}" alt="{{ author.name }}">
+			{% endif %}
+			</a>
+		</div>
+	</header>
+	{{ content }}
+</article>

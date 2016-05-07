@@ -1,0 +1,28 @@
+# Details
+title:       Future Imperfect
+description: Jekyll port of Future Imperfect template by HTML5 UP
+url:         http://localhost:4000
+baseurl:     
+
+#Author
+author:
+  name:      'Seshal Jain'
+  url:       http://seshal.me
+
+paginate:    3
+paginate_path: "/:num/"
+
+# Permalinks
+permalink:   /:categories/:title/
+
+# Build settings
+destination: dest
+source:      src
+markdown:    kramdown
+highlighter: pygments
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll/tagging
+  - jekyll-tagging-related_posts
