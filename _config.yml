@@ -16,8 +16,8 @@ paginate_path: "/:num/"
 permalink:   /:categories/:title/
 
 # Build settings
-# destination: dest 
-# source:      src # Commented out because Github Pages does not allow different source directory
+# destination: dest
+# source:      src # Removed because Github Pages does not allow different source directory
 markdown:    kramdown
 highlighter: pygments
 
@@ -26,4 +26,3 @@ gems:
   - jekyll-paginate
   - jekyll/tagging
   - jekyll-tagging-related_posts
-  - github-pages
