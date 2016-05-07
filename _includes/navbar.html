@@ -1,9 +1,9 @@
 <header id="header">
-	<h1><a href="/">Future Imperfect</a></h1>
+	<h1><a href="{{ site.url | append: site.baseurl }}">Future Imperfect</a></h1>
 	<nav class="links">
 		<ul>
 			{% for link in site.data.navbar.navbar_links %}
-			<li><a href="{{ link.url | prepend: site.baseurl | prepend: site.url }}">{{ link.title }}</a></li>
+			<li><a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a></li>
 			{% endfor %}
 		</ul>
 	</nav>

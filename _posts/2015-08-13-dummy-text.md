@@ -28,7 +28,6 @@ An h1 header
 > They can span multiple paragraphs,
 > if you like.
 
-
 An h2 header
 ------------
 
