@@ -21,10 +21,10 @@ layout: default
 				{% endif %}
 				{{ author.name }}
 			</span>
-			{% if author.avatar contains 'http' %}
-			<img src="{{ author.avatar }}" alt="{{ author.name }}">
-			{% elsif author.avatar %}
-			<img src="{{ site.baseurl }}/img/authors/{{ author.avatar }}" alt="{{ author.name }}">
+			{% if author.picture contains 'http' %}
+			<img src="{{ author.picture }}" alt="{{ author.name }}">
+			{% elsif author.picture %}
+			<img src="{{ author.picture | prepend: site.baseurl }}" alt="{{ author.name }}">
 			{% endif %}
 			</a>
 		</div>

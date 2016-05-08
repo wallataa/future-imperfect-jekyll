@@ -6,8 +6,7 @@ baseurl:     /future-imperfect-jekyll
 
 #Author
 author:
-  name:      'Seshal Jain'
-  url:       http://seshal.me
+  name:      'John Doe'
 
 paginate:    3
 paginate_path: "/:num/"
@@ -26,3 +25,4 @@ gems:
   - jekyll-paginate
   - jekyll/tagging
   - jekyll-tagging-related_posts
+  - jekyll-seo-tag

@@ -37,11 +37,13 @@ Here's a numbered list:
  2. second item
  3. third item
 
-{% highlight js %}
+``` js
 define foobar() {
     print "Welcome to flavor country!";
 }
-{% endhighlight %}
+```
+
+<!-- OR -->
 
 {% highlight python %}
 import time
@@ -58,9 +60,9 @@ Now a nested list:
 
  1. First, get these ingredients:
 
-      * carrots
-      * celery
-      * lentils
+    * carrots
+    * celery
+    * lentils
 
  2. Boil some water.
 

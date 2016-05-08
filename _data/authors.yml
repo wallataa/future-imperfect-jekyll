@@ -1,7 +1,9 @@
 John Doe:
   name: John Doe
-  avatar: johndoe.jpg
+  picture: /img/authors/johndoe.jpg
+  twitter: janedoe
 
 Jane Doe:
   name: Jane Doe
-  avatar: janedoe.jpg
+  picture: /img/authors/janedoe.jpg
+  twitter: janedoe
