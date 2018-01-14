@@ -1,12 +1,12 @@
 # Details
-title:       Future Imperfect
-description: Jekyll port of Future Imperfect template by HTML5 UP
+title:       Walter Jothiraj
+description: A portfolio/blog
 url:         http://seshaljain.github.io
 baseurl:     /future-imperfect-jekyll
 
 #Author
 author:
-  name:      'John Doe'
+  name:      'Walter'
 
 paginate:    3
 paginate_path: "/:num/"
